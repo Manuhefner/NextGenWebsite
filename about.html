@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Emmanuel Sillis, the visionary founder behind NextGen AI Technology. Discover the story of a serial entrepreneur dedicated to democratizing AI and building empathetic tech ecosystems.">
+    <title>About Emmanuel Sillis - Founder of NextGen AI Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html"><img src="nextgen banner logo.png" alt="NextGen AI Technology Logo" class="logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Technology & Portfolio</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="investors.html">Investors</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Paginatitel -->
+        <section class="page-title container">
+            <h2 class="animate">About the Founder</h2>
+            <p class="animate" style="--delay: 0.1s;">The driving force behind our mission to build a future where technology serves people first.</p>
+        </section>
+
+        <!-- Founder Sectie -->
+        <section class="founder-section container">
+            <div class="about-grid">
+                <div class="founder-image animate">
+                    <img src="emmanuel-sillis-nextgen-ai.jpg" alt="Emmanuel Sillis, Founder of NextGen AI Technology">
+                </div>
+                <div class="founder-bio animate" style="--delay: 0.2s;">
+                    <h4>Emmanuel Sillis</h4>
+                    <p>Emmanuel Sillis is a serial entrepreneur, visionary, and the driving force behind NextGen AI Technology. With over a decade of hands-on experience at the crossroads of AI, automation, management strategy development, and real-world financial management, he has been immersed in complex business operations and technology from an early age.</p>
+                    <p>His leadership has yielded unprecedented results. At the helm of ACE Media Management, Emmanuel managed a dynamic ecosystem of over 5 million content creators. He spearheaded the development of 'Falcon', a proprietary AI developed back in 2019. This technology was the first of its kind, outperforming major financial institutions and top analysts through advanced, AI-driven social engineering. This groundbreaking ecosystem, integrating LVGroup, ACE Technologies, and IT-Direct, proved his ability to build game-changing solutions at scale.</p>
+                    <p>His 'power to the people' ethos extends beyond business. As a philanthropist, he challenged traditional structures through his personal initiative, 'The Oracle Of Afrikerke'. Through the renowned 'PayPal Hours' program, he directly invested €70,000 annually into his social media followers, providing them with the tools and resources to achieve financial independence. This initiative empowered countless individuals to escape debt, serving as a direct testament to his 'us vs. institutions' philosophy.</p>
+                    <p>As CEO of AMS Sillis, and carrying this legacy of innovation forward, Emmanuel now focuses on one mission: to build empathetic tech ecosystems that make powerful tools accessible to everyone. His work combines strategic cost optimization and AI-driven solutions with a focus on transparency, ethical impact, and fostering genuine human connections.</p>
+                    <blockquote>"Technology should not intimidate—it should liberate. With AI, we can create systems that work for people, not against them. That is the future I am building with NextGen.”</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visie Sectie -->
+        <section class="vision-section">
+            <div class="container">
+                <h2 class="animate">Our Vision with NextGen AI</h2>
+                <div class="vision-grid">
+                    <div class="vision-item animate" style="--delay: 0s;">
+                        <h3>To Democratize AI</h3>
+                        <p>By creating intelligent agents that simplify complexity, reduce costs, and empower users.</p>
+                    </div>
+                    <div class="vision-item animate" style="--delay: 0.1s;">
+                        <h3>To Build Empathetic Tech</h3>
+                        <p>To create monetizable digital experiences that combat loneliness and enhance connectivity.</p>
+                    </div>
+                    <div class="vision-item animate" style="--delay: 0.2s;">
+                        <h3>To Drive Sustainable Growth</h3>
+                        <p>To integrate AI for real-world impact—from carbon tracking to redefining business structures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer><div class="container"><p>&copy; 2024 NextGen AI Technology. All rights reserved.</p></div></footer>
+
+    <script>
+        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
+        document.querySelectorAll('.animate').forEach(element=>{observer.observe(element)});
+    </script>
+</body>
+</html>
+

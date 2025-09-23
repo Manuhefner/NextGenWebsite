@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The latest news, insights, and announcements from NextGen AI Technology. Stay informed about our progress in building the future of AI.">
+    <title>News & Insights - NextGen AI Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html"><img src="nextgen banner logo.png" alt="NextGen AI Technology Logo" class="logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Technology & Portfolio</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="investors.html">Investors</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Paginatitel -->
+        <section class="page-title container">
+            <h2 class="animate">News & Insights</h2>
+            <p class="animate" style="--delay: 0.1s;">The latest developments from the forefront of the AI revolution.</p>
+        </section>
+
+        <!-- News Grid -->
+        <section class="news-section container">
+            <div class="news-grid">
+                <!-- Voorbeeld Artikel 1 -->
+                <article class="news-card animate" style="--delay: 0s;">
+                    <a href="#" class="news-image-link">
+                        <img src="https://placehold.co/600x400/D20000/FFFFFF?text=NextGen+AI" alt="Placeholder image for a news article">
+                    </a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span>September 23, 2025</span> | <span>Company News</span>
+                        </div>
+                        <h3><a href="#">NextGen AI Technology Secures Seed Funding to Accelerate Development</a></h3>
+                        <p>We are thrilled to announce the closing of our seed funding round, enabling us to fast-track the development of our innovative product pipeline, including MapGenius and ChatLink...</p>
+                        <a href="#" class="learn-more">Read More &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Voorbeeld Artikel 2 -->
+                <article class="news-card animate" style="--delay: 0.1s;">
+                     <a href="#" class="news-image-link">
+                        <img src="https://placehold.co/600x400/1A1A1A/FFFFFF?text=CarbonCut+AI" alt="Placeholder image for a news article">
+                    </a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span>September 15, 2025</span> | <span>Product Updates</span>
+                        </div>
+                        <h3><a href="#">CarbonCut AI Platform Launches New Features for Enhanced Sustainability Reporting</a></h3>
+                        <p>Our flagship product, CarbonCut AI, has received a major update, introducing advanced analytics and reporting tools to help businesses meet and exceed their sustainability goals...</p>
+                        <a href="#" class="learn-more">Read More &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Voorbeeld Artikel 3 -->
+                <article class="news-card animate" style="--delay: 0.2s;">
+                     <a href="#" class="news-image-link">
+                        <img src="https://placehold.co/600x400/555555/FFFFFF?text=AI+Insights" alt="Placeholder image for a news article">
+                    </a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span>September 5, 2025</span> | <span>Industry Insights</span>
+                        </div>
+                        <h3><a href="#">The Future is Empathetic: Why Human-Centric AI is the Next Frontier</a></h3>
+                        <p>Our founder, Emmanuel Sillis, shares his vision on the future of artificial intelligence, emphasizing the critical need for empathetic, human-centric design in technology...</p>
+                        <a href="#" class="learn-more">Read More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer><div class="container"><p>&copy; 2024 NextGen AI Technology. All rights reserved.</p></div></footer>
+
+    <script>
+        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
+        document.querySelectorAll('.animate').forEach(element=>{observer.observe(element)});
+    </script>
+</body>
+</html>
+

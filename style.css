@@ -1,0 +1,729 @@
+/* --- Globale Stijlen en Merkidentiteit --- */
+:root {
+    --primary-red: #D20000;
+    --dark-bg: #1A1A1A;
+    --light-text: #FFFFFF;
+    --dark-text: #222222;
+    --card-bg: #F9F9F9;
+    --border-light: #EAEAEA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.5rem; }
+
+/* --- Animatie Stijlen --- */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Algemene Componenten --- */
+.page-title {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid var(--border-light);
+}
+.page-title h2 {
+    margin-bottom: 10px;
+}
+.page-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- 1. Header & Navigatie --- */
+header {
+    background-color: var(--light-text);
+    border-bottom: 1px solid var(--border-light);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 45px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-red);
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--primary-red);
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+    width: 100%;
+}
+
+/* --- 2. Homepage Stijlen --- */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-text);
+    background-image: url('join the ai revolution. nextgen.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--primary-red);
+    color: var(--light-text);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #A00000;
+    transform: translateY(-2px);
+}
+
+.portfolio-preview {
+    padding: 80px 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: var(--primary-red);
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    font-weight: 700;
+}
+
+.audience-cta {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.cta-box {
+    border: 1px solid #444;
+    padding: 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-box:hover {
+    background-color: #2a2a2a;
+}
+
+.cta-box h3 {
+    font-size: 1.8rem;
+    color: var(--light-text);
+}
+
+.cta-button-secondary {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--primary-red);
+    color: var(--light-text);
+    transform: translateY(-2px);
+}
+
+/* --- 3. About Us Pagina Stijlen --- */
+.founder-section {
+    padding: 80px 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.founder-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--border-light);
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.founder-image:hover img {
+    transform: scale(1.05);
+}
+
+.founder-bio h4 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.founder-bio p {
+    margin-bottom: 20px;
+}
+
+.founder-bio blockquote {
+    border-left: 3px solid var(--primary-red);
+    padding-left: 20px;
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.vision-section {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 20px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.vision-item h3 {
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.vision-item p {
+    color: #ccc;
+}
+
+/* --- 4. Portfolio Pagina Stijlen --- */
+.portfolio-page {
+    padding: 80px 20px;
+}
+
+.portfolio-full-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-left: 5px solid var(--primary-red);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.portfolio-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.portfolio-card h3 {
+    margin-bottom: 0;
+}
+
+.portfolio-card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-live { background-color: #d4edda; color: #155724; }
+.status-flagship { background-color: #f8d7da; color: #721c24; }
+.status-beta { background-color: #cce5ff; color: #004085; }
+.status-planned { background-color: #fff3cd; color: #856404; }
+
+/* --- 5. Investors Pagina Stijlen --- */
+.investor-content {
+    padding: 80px 20px;
+}
+
+.investor-section {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 40px;
+}
+
+.investor-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.investor-section h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.roadmap {
+    position: relative;
+    padding: 20px 0;
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--border-light);
+    transform: translateX(-2px);
+}
+
+.roadmap-item {
+    position: relative;
+    width: 50%;
+    padding: 10px 40px;
+    margin-bottom: 20px;
+}
+
+.roadmap-item:nth-child(odd) { left: 0; text-align: right; }
+.roadmap-item:nth-child(even) { left: 50%; }
+
+.roadmap-milestone {
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--border-light);
+    border: 4px solid var(--light-text);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.roadmap-item:nth-child(odd) .roadmap-milestone { right: -10px; }
+.roadmap-item:nth-child(even) .roadmap-milestone { left: -10px; }
+.roadmap-item.completed .roadmap-milestone,
+.roadmap-item.current .roadmap-milestone { background-color: var(--primary-red); }
+.roadmap-item.current .roadmap-milestone { transform: scale(1.2); }
+
+.roadmap-item h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.metric-box h4 {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 5px;
+}
+
+.metric-box p {
+    color: #666;
+    font-weight: 600;
+}
+
+.downloads { text-align: center; }
+.downloads p { margin-bottom: 20px; }
+
+/* --- 6. Contact Pagina Stijlen --- */
+.contact-section { padding: 80px 20px; }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 50px;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.info-item { margin-bottom: 25px; }
+.info-item h4 { font-size: 1rem; color: #555; margin-bottom: 5px; }
+.info-item p, .info-item a { font-size: 1.1rem; font-weight: 600; }
+.info-item a { color: var(--dark-text); }
+.info-item a:hover { color: var(--primary-red); }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 2px rgba(210, 0, 0, 0.2);
+}
+
+/* --- 7. Productpagina Stijlen --- */
+.product-hero {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 20px;
+    text-align: center;
+}
+.product-hero h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+.product-overview {
+    padding: 80px 20px;
+}
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.overview-visual img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.product-features {
+    padding: 80px 20px;
+    background-color: var(--card-bg);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    background-color: var(--primary-red);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.product-market-potential {
+    padding: 40px 0 0 0;
+}
+
+.product-cta {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 20px;
+    text-align: center;
+}
+.product-cta p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* --- 8. News Pagina Stijlen --- */
+.news-section {
+    padding: 80px 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.news-card {
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.news-image-link {
+    display: block;
+    overflow: hidden;
+}
+
+.news-image-link img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-image-link img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.news-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.news-content h3 a {
+    color: var(--dark-text);
+    transition: color 0.3s ease;
+}
+
+.news-content h3 a:hover {
+    color: var(--primary-red);
+}
+
+.news-content p {
+    margin-bottom: 20px;
+}
+
+
+/* --- 9. Footer --- */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* --- 10. Mobiele Responsiviteit --- */
+@media (max-width: 992px) {
+    .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .product-hero h1 { font-size: 3rem; }
+
+    header .container { flex-direction: column; gap: 15px; }
+    header nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    
+    .grid-2, .about-grid, .overview-grid { grid-template-columns: 1fr; }
+    
+    .overview-grid {
+        gap: 40px;
+    }
+    .overview-visual {
+        order: -1; /* Zet afbeelding bovenaan op mobiel */
+    }
+
+    .founder-image { max-width: 300px; height: 300px; margin: 0 auto 30px auto; }
+    .portfolio-full-grid { grid-template-columns: 1fr; }
+    .news-grid { grid-template-columns: 1fr; }
+
+    .roadmap::before { left: 10px; }
+    .roadmap-item, .roadmap-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 50px;
+        text-align: left;
+    }
+    .roadmap-item:nth-child(odd) .roadmap-milestone,
+    .roadmap-item:nth-child(even) .roadmap-milestone { left: 0; }
+}
+

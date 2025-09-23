@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the complete technology portfolio of NextGen AI Technology. Discover our live products, development pipeline, and next-generation concepts in AI.">
+    <title>Technology & Portfolio - NextGen AI Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html"><img src="nextgen banner logo.png" alt="NextGen AI Technology Logo" class="logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Technology & Portfolio</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="investors.html">Investors</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Paginatitel -->
+        <section class="page-title container">
+            <h2 class="animate">Our Technology & Portfolio</h2>
+            <p class="animate" style="--delay: 0.1s;">A complete overview of our innovative AI solutions, from live products to next-generation concepts.</p>
+        </section>
+
+        <!-- Volledige Portfolio Grid -->
+        <section class="portfolio-page">
+            <div class="portfolio-full-grid container">
+                <!-- CarbonCut AI -->
+                <div class="portfolio-card animate" style="--delay: 0s;">
+                    <div class="card-header">
+                        <h3>CarbonCut AI</h3>
+                        <span class="status-badge status-flagship">Flagship</span>
+                    </div>
+                    <p>AI-powered carbon footprint tracking, reduction recommendations, and a certified offsets marketplace. A core tool for sustainability.</p>
+                    <a href="carboncut-ai.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- NextGen Assist -->
+                <div class="portfolio-card animate" style="--delay: 0.1s;">
+                    <div class="card-header">
+                        <h3>NextGen Assist</h3>
+                        <span class="status-badge status-live">Live</span>
+                    </div>
+                    <p>An active AI assistant for SMEs, handling customer management, invoicing, calendars, and complex notifications.</p>
+                    <a href="nextgen-assist.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- ChatLink -->
+                <div class="portfolio-card animate" style="--delay: 0.2s;">
+                    <div class="card-header">
+                        <h3>ChatLink</h3>
+                        <span class="status-badge status-beta">Beta Planned</span>
+                    </div>
+                    <p>Conversational AI platform for chat-to-pay companionship, focusing on ethical, non-explicit emotional support and advice.</p>
+                    <a href="chatlink.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- Legal Timeline -->
+                <div class="portfolio-card animate" style="--delay: 0s;">
+                    <div class="card-header">
+                        <h3>Legal Timeline</h3>
+                        <span class="status-badge status-live">Live</span>
+                    </div>
+                    <p>Advanced reconstruction of conflicts for legal use, utilizing GPS, chat, and audio evidence to build clear timelines.</p>
+                    <a href="legal-timeline.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- VoicePitch Studio -->
+                <div class="portfolio-card animate" style="--delay: 0.1s;">
+                    <div class="card-header">
+                        <h3>VoicePitch Studio</h3>
+                        <span class="status-badge status-live">Live</span>
+                    </div>
+                    <p>AI-driven video and voice-over generation tool designed to create powerful and professional business presentations.</p>
+                    <a href="voicepitch-studio.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- MapGenius -->
+                <div class="portfolio-card animate" style="--delay: 0.2s;">
+                    <div class="card-header">
+                        <h3>MapGenius</h3>
+                        <span class="status-badge status-beta">In Development</span>
+                    </div>
+                    <p>A geo-visualization tool for mapping movement and timing data, perfect for logistics, security, and analysis.</p>
+                    <a href="mapgenius.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- VideoAnalyzer AI -->
+                <div class="portfolio-card animate" style="--delay: 0s;">
+                    <div class="card-header">
+                        <h3>VideoAnalyzer AI</h3>
+                        <span class="status-badge status-planned">Planned</span>
+                    </div>
+                    <p>Advanced tool for analyzing video content, extracting actionable insights for security, media, and educational purposes.</p>
+                    <a href="videoanalyzer-ai.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- AI Agents4U -->
+                <div class="portfolio-card animate" style="--delay: 0.1s;">
+                    <div class="card-header">
+                        <h3>AI Agents4U</h3>
+                        <span class="status-badge status-planned">Planned</span>
+                    </div>
+                    <p>An autonomous AI agent system designed for personalized task automation, streamlining workflows for individuals and businesses.</p>
+                    <a href="ai-agents4u.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+                <!-- Chat Inspector -->
+                <div class="portfolio-card animate" style="--delay: 0.2s;">
+                    <div class="card-header">
+                        <h3>Chat Inspector</h3>
+                        <span class="status-badge status-planned">Planned</span>
+                    </div>
+                    <p>A specialized tool to detect accusations and other sensitive patterns within chat histories for moderation and legal discovery.</p>
+                    <a href="chat-inspector.html" class="learn-more">Learn More &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer><div class="container"><p>&copy; 2024 NextGen AI Technology. All rights reserved.</p></div></footer>
+    
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate').forEach(element => {observer.observe(element)});
+    </script>
+</body>
+</html>
+
