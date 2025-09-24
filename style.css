@@ -1,30 +1,73 @@
-/* Globale Stijlen en Merkidentiteit */
-:root {
-    --primary-red: #D20000;
-    --dark-bg: #1A1A1A;
-    --light-text: #FFFFFF;
-    --dark-text: #222222;
-    --card-bg: #F9F9F9;
-    --border-light: #EAEAEA;
-    --border-dark: #333333;
-    --status-flagship: #D20000;
-    --status-live: #00B16A;
-    --status-beta: #FFA500;
-    --status-planned: #4A90E2;
+/* Globale Stijlen */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* ... (rest of the CSS code, with url('/join the ai revolution. nextgen.jpg') updated) ... */
-.hero {
-    position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px 0;
     text-align: center;
-    color: var(--light-text);
-    background-image: url('/join the ai revolution. nextgen.jpg');
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+/* Hero Sectie */
+#hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/path/to/your/join-the-ai-revolution.jpg');
     background-size: cover;
     background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
 }
-/* ... (rest of CSS) ... */
 
+.cta-button {
+    display: inline-block;
+    background-color: #E53935; /* Uw merk-rode kleur */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Projecten Sectie */
+#projects {
+    padding: 50px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
