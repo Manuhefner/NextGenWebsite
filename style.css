@@ -99,7 +99,7 @@ header nav ul li a.active {
     justify-content: center;
     text-align: center;
     color: var(--light-text);
-    background-image: url('/join the ai revolution. nextgen.jpg');
+    background-image: url('/images/join the ai revolution nextgen.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -496,4 +496,3 @@ footer {
     .roadmap-item { padding-left: 0; text-align: center; }
     .roadmap-milestone { left: 50%; transform: translateX(-50%); }
 }
-
