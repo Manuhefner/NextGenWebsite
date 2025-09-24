@@ -1,11 +1,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ page.description | default: site.description }}">
-<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<title>{{ page.title }}</title>
 <link rel="stylesheet" href="/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- Plak hier het script van uw Consent Management Platform (bv. CookieYes) -->
+<!-- Start cookieyes banner -->
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/597614688c0660105922ae6d/script.js"></script>
+<!-- End cookieyes banner -->
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7C71GF6KNX"></script>
@@ -16,3 +18,4 @@
 
   gtag('config', 'G-7C71GF6KNX');
 </script>
+
