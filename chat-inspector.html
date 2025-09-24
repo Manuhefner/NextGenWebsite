@@ -1,119 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enhance online safety and accelerate legal discovery with Chat Inspector, a specialized tool by NextGen AI to detect sensitive patterns in chat histories.">
-    <title>Chat Inspector - AI Content Moderation - NextGen AI Technology</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+---
+layout: default
+title: Chat Inspector - AI-Powered Chat Analysis - NextGen AI Technology
+description: Discover Chat Inspector, a specialized AI tool to detect accusations and other sensitive patterns within chat histories for content moderation and legal discovery.
+---
+<section class="product-hero">
+    <div class="container animate">
+        <span class="status-badge status-planned">Planned</span>
+        <h1>Chat Inspector</h1>
+        <p class="hero-subtitle">A Specialized Tool to Detect Accusations and Sensitive Patterns in Chat Histories.</p>
+    </div>
+</section>
+<section class="product-overview container">
+    <div class="overview-grid">
+        <div class="overview-text animate">
+            <h3>The Challenge: Hidden Risks in Communication</h3>
+            <p>Digital conversations on platforms, in legal discovery, and within corporate communications can contain hidden risks, from false accusations to policy violations. Manually reviewing thousands of messages to identify these sensitive patterns is an impossible task.</p>
+            <h3>Our Solution: Proactive Risk Detection</h3>
+            <p>Chat Inspector is a highly specialized NLP tool designed to analyze large volumes of text-based communication. It goes beyond simple keyword searching to understand context and identify specific, predefined patterns such as accusations, threats, or compliance breaches, flagging them for human review.</p>
+        </div>
+        <div class="overview-visual animate" style="--delay: 0.2s;">
+            <img src="/chat-inspector-mockup.png" alt="Mockup of the Chat Inspector analysis tool">
+        </div>
+    </div>
+</section>
+<section class="product-features">
+    <div class="container">
+        <h2 class="animate">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-item animate" style="--delay: 0s;">
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z" /></svg></div>
+                <h3>Contextual Pattern Recognition</h3>
+                <p>Our AI is trained to understand the nuances of language to accurately identify accusations and other complex patterns.</p>
+            </div>
+            <div class="feature-item animate" style="--delay: 0.1s;">
+                 <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8" /></svg></div>
+                <h3>Customizable Classifiers</h3>
+                <p>Tailor the system to detect patterns specific to your industry, platform, or legal case, from harassment to financial fraud.</p>
+            </div>
+            <div class="feature-item animate" style="--delay: 0.2s;">
+                 <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                <h3>Secure & Compliant</h3>
+                <p>Designed for sensitive data, providing a secure environment for analysis with detailed reporting for legal and moderation teams.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-cta">
+    <div class="container animate">
+        <h2>Identify Risks Before They Escalate</h2>
+        <p>Learn how Chat Inspector can enhance your content moderation and legal discovery processes.</p>
+        <a href="/contact.html" class="cta-button">Inquire Now</a>
+    </div>
+</section>
+```
+
+---
+
+### Stap 2: De "Push"-instructies
+
+Nu u de volledige, correcte code voor alle bestanden heeft, is hier de **aparte** instructie om deze definitieve versie naar uw live website te "pushen".
+
+Voer de volgende commando's één voor één uit in uw terminal:
+
+1.  **Navigeer naar uw projectmap:**
+    ```bash
+    cd "C:\Users\Administrator\Streaming via Google Drive\Mijn Drive\NextGenWebsite\GITHUB\NextGenWebsite"
+    ```
+
+2.  **Voeg alle herstelde bestanden toe:**
+    ```bash
+    git add .
+    ```
+
+3.  **Sla de definitieve herstelling op:**
+    ```bash
+    git commit -m "FINAL FIX: Complete restoration of all project files"
     
-    <!-- Plak hier het script van uw Consent Management Platform (bv. CookieYes) -->
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7C71GF6KNX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-7C71GF6KNX');
-    </script>
-</head>
-<body>
-    <!-- De rest van uw pagina... -->
-    <header>
-        <nav class="container">
-            <a href="index.html"><img src="nextgen banner logo.png" alt="NextGen AI Technology Logo" class="logo"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html" class="active">Technology & Portfolio</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="investors.html">Investors</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Product Hero Sectie -->
-        <section class="product-hero">
-            <div class="container animate">
-                <span class="status-badge status-planned">Planned</span>
-                <h1>Chat Inspector</h1>
-                <p class="hero-subtitle">A Specialized Tool to Detect Accusations and Sensitive Patterns Within Chat Histories.</p>
-            </div>
-        </section>
-
-        <!-- Product Overzicht -->
-        <section class="product-overview container">
-            <div class="overview-grid">
-                <div class="overview-text animate">
-                    <h3>The Challenge: Finding Needles in a Digital Haystack</h3>
-                    <p>Moderating online communities and conducting legal discovery requires sifting through massive volumes of chat logs to find specific, often sensitive, content. This manual process is inefficient, costly, and emotionally taxing for human reviewers.</p>
-                    <h3>Our Solution: AI-Powered Precision Analysis</h3>
-                    <p>Chat Inspector is a purpose-built NLP tool that analyzes chat histories to automatically flag accusations, threats, and other predefined sensitive patterns. It provides a crucial first-pass analysis, empowering moderation teams and legal professionals to focus their attention where it's needed most.</p>
-                </div>
-                <div class="overview-visual animate" style="--delay: 0.2s;">
-                    <img src="chat-inspector-mockup.png" alt="Mockup of the Chat Inspector pattern detection visualization">
-                </div>
-            </div>
-        </section>
-
-        <!-- Kernfuncties -->
-        <section class="product-features">
-            <div class="container">
-                <h2 class="animate">Key Features</h2>
-                <div class="features-grid">
-                    <div class="feature-item animate" style="--delay: 0s;">
-                        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 4A5 5 0 005 21h3a5 5 0 005-5v-4m0 4v-4m0 4a5 5 0 015-5h3a5 5 0 015 5v-4m0 4a5 5 0 00-5-5h-3a5 5 0 00-5 5m-4 0v-4m0 4h4m-4 0a5 5 0 01-5-5v-4m14 0v-4a5 5 0 00-5-5h-3a5 5 0 00-5 5v4m4 0h4" /></svg></div>
-                        <h3>Targeted Pattern Detection</h3>
-                        <p>Utilizes advanced NLP models trained specifically to identify accusations and other sensitive language patterns.</p>
-                    </div>
-                    <div class="feature-item animate" style="--delay: 0.1s;">
-                         <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
-                        <h3>Contextual Analysis</h3>
-                        <p>Goes beyond simple keyword matching to understand the context and nuance of conversations, reducing false positives.</p>
-                    </div>
-                    <div class="feature-item animate" style="--delay: 0.2s;">
-                         <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg></div>
-                        <h3>Secure & Confidential</h3>
-                        <p>Designed for secure processing of sensitive data, ensuring compliance with privacy regulations for legal and corporate use.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Marktpotentieel -->
-        <section class="product-market-potential container">
-            <div class="investor-section animate">
-                <h3>The Legal Tech & Content Moderation Market</h3>
-                <p>Chat Inspector serves a critical niche within the massive Legal Tech market, providing essential tools for e-discovery and online community safety.</p>
-                <div class="metrics-grid">
-                    <div class="metric-box" style="--delay: 0s;"><h4>$29.8B</h4><p>Legal Tech Market (2025)</p></div>
-                    <div class="metric-box" style="--delay: 0.1s;"><h4>$65.5B</h4><p>Projected Market by 2034</p></div>
-                    <div class="metric-box" style="--delay: 0.2s;"><h4>9.1%</h4><p>Compound Annual Growth</p></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="product-cta">
-            <div class="container animate">
-                <h2>Enhance Safety and Accelerate Discovery.</h2>
-                <p>Chat Inspector is a planned technology. Contact our team to discuss pilot programs and partnership opportunities.</p>
-                <a href="contact.html" class="cta-button">Inquire About Partnerships</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer><div class="container"><p>&copy; 2024 NextGen AI Technology. All rights reserved.</p></div></footer>
-    <script>
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
-        document.querySelectorAll('.animate, .metric-box').forEach(element=>{observer.observe(element)});
-    </script>
-</body>
-</html>
 
