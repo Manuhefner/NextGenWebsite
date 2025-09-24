@@ -1,107 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Invest in the future of artificial intelligence. Discover NextGen AI Technology's vision, strategic roadmap, market position, and key financial metrics.">
-    <title>Investor Relations - NextGen AI Technology</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YOUR_MEASUREMENT_ID');
-    </script>
-</head>
-<body>
-    <!-- De rest van uw pagina... -->
-    <header>
-        <nav class="container">
-            <a href="index.html"><img src="nextgen banner logo.png" alt="NextGen AI Technology Logo" class="logo"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Technology & Portfolio</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="investors.html" class="active">Investors</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Paginatitel -->
-        <section class="page-title container">
-            <h2 class="animate">Investor Relations</h2>
-            <p class="animate" style="--delay: 0.1s;">We are building a category-defining company at the forefront of the AI revolution. Discover why NextGen AI Technology represents a unique investment opportunity.</p>
-        </section>
-
-        <!-- Investeerders Content -->
-        <div class="investor-content">
-             <!-- Marktpositie -->
-            <section class="investor-section container">
-                <h3 class="animate">Our Strategic Market Position</h3>
-                <p class="animate" style="--delay: 0.1s;">The global AI market is projected to grow to over $2.4 trillion by 2032. NextGen AI is strategically positioned to capture significant shares in high-growth niches including Legal Tech, Carbon Management, and the AI Companionship Economy. Our diverse portfolio mitigates risk while providing multiple avenues for exponential growth.</p>
-            </section>
-
-            <!-- Key Metrics -->
-            <section class="investor-section container">
-                <h3 class="animate">Proven Track Record & Vision</h3>
-                <p class="animate" style="--delay: 0.1s;">Led by a serial entrepreneur with a history of building scalable, disruptive technologies, NextGen AI is founded on proven success.</p>
-                <div class="metrics-grid animate" style="--delay: 0.2s;">
-                    <div class="metric-box" style="--delay: 0s;"><h4>5M+</h4><p>Creators Managed in Past Ventures</p></div>
-                    <div class="metric-box" style="--delay: 0.1s;"><h4>€70k+</h4><p>Annual Philanthropic Investment</p></div>
-                    <div class="metric-box" style="--delay: 0.2s;"><h4>9</h4><p>Unique Products in Pipeline</p></div>
-                </div>
-            </section>
-            
-            <!-- Roadmap -->
-            <section class="investor-section container">
-                <h3 class="animate">Our Development Roadmap</h3>
-                <div class="roadmap animate" style="--delay: 0.1s;">
-                    <div class="roadmap-item completed">
-                        <div class="roadmap-milestone"></div>
-                        <h4>2024: Foundation & Live Products</h4>
-                        <p>Company founded. NextGen Assist, Legal Timeline, and VoicePitch Studio launched and operational.</p>
-                    </div>
-                    <div class="roadmap-item current">
-                        <div class="roadmap-milestone"></div>
-                        <h4>2025: MVP & Seed Funding</h4>
-                        <p>Development of MapGenius. Actively seeking seed funding to accelerate growth and pipeline development.</p>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-milestone"></div>
-                        <h4>2026: Beta Launch</h4>
-                        <p>Planned beta launch for ChatLink, entering the high-growth AI companionship market.</p>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-milestone"></div>
-                        <h4>2027+: Scaled Expansion</h4>
-                        <p>Full commercial launch of pipeline products including VideoAnalyzer AI and AI Agents4U.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Downloads & Contact -->
-            <section class="investor-section container downloads">
-                <h3 class="animate">Get More Information</h3>
-                <p class="animate" style="--delay: 0.1s;">For a detailed look at our financial projections and business plan, please contact us to request our investor deck.</p>
-                <a href="contact.html" class="cta-button animate" style="--delay: 0.2s;">Request Investor Deck</a>
-            </section>
+---
+layout: default
+title: Technology & Portfolio - NextGen AI Technology
+description: Explore the complete technology portfolio of NextGen AI Technology. Discover our live products, development pipeline, and next-generation concepts in AI.
+---
+<section class="page-title container">
+    <h2 class="animate">Our Technology & Portfolio</h2>
+    <p class="animate" style="--delay: 0.1s;">A complete overview of our innovative AI solutions, from live products to next-generation concepts.</p>
+</section>
+<section class="portfolio-page">
+    <div class="portfolio-full-grid container">
+        <div class="portfolio-card animate" style="--delay: 0s;">
+            <div class="card-header">
+                <h3>CarbonCut AI</h3>
+                <span class="status-badge status-flagship">Flagship</span>
+            </div>
+            <p>AI-powered carbon footprint tracking, reduction recommendations, and a certified offsets marketplace. A core tool for sustainability.</p>
+            <a href="/carboncut-ai.html" class="learn-more">Learn More &rarr;</a>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer><div class="container"><p>&copy; 2024 NextGen AI Technology. All rights reserved.</p></div></footer>
-
-    <script>
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
-        document.querySelectorAll('.animate').forEach(element=>{observer.observe(element)});
-    </script>
-</body>
-</html>
+        <div class="portfolio-card animate" style="--delay: 0.1s;">
+            <div class="card-header">
+                <h3>NextGen Assist</h3>
+                <span class="status-badge status-live">Live</span>
+            </div>
+            <p>An active AI assistant for SMEs, handling customer management, invoicing, calendars, and complex notifications.</p>
+            <a href="/nextgen-assist.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0.2s;">
+            <div class="card-header">
+                <h3>ChatLink</h3>
+                <span class="status-badge status-beta">Beta Planned</span>
+            </div>
+            <p>Conversational AI platform for chat-to-pay companionship, focusing on ethical, non-explicit emotional support and advice.</p>
+            <a href="/chatlink.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0s;">
+            <div class="card-header">
+                <h3>Legal Timeline</h3>
+                <span class="status-badge status-live">Live</span>
+            </div>
+            <p>Advanced reconstruction of conflicts for legal use, utilizing GPS, chat, and audio evidence to build clear timelines.</p>
+            <a href="/legal-timeline.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0.1s;">
+            <div class="card-header">
+                <h3>VoicePitch Studio</h3>
+                <span class="status-badge status-live">Live</span>
+            </div>
+            <p>AI-driven video and voice-over generation tool designed to create powerful and professional business presentations.</p>
+            <a href="/voicepitch-studio.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0.2s;">
+            <div class="card-header">
+                <h3>MapGenius</h3>
+                <span class="status-badge status-beta">In Development</span>
+            </div>
+            <p>A geo-visualization tool for mapping movement and timing data, perfect for logistics, security, and analysis.</p>
+            <a href="/mapgenius.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0s;">
+            <div class="card-header">
+                <h3>VideoAnalyzer AI</h3>
+                <span class="status-badge status-planned">Planned</span>
+            </div>
+            <p>Advanced tool for analyzing video content, extracting actionable insights for security, media, and educational purposes.</p>
+            <a href="/videoanalyzer-ai.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0.1s;">
+            <div class="card-header">
+                <h3>AI Agents4U</h3>
+                <span class="status-badge status-planned">Planned</span>
+            </div>
+            <p>An autonomous AI agent system designed for personalized task automation, streamlining workflows for individuals and businesses.</p>
+            <a href="/ai-agents4u.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="portfolio-card animate" style="--delay: 0.2s;">
+            <div class="card-header">
+                <h3>Chat Inspector</h3>
+                <span class="status-badge status-planned">Planned</span>
+            </div>
+            <p>A specialized tool to detect accusations and other sensitive patterns within chat histories for moderation and legal discovery.</p>
+            <a href="/chat-inspector.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+    </div>
+</section>
 

@@ -1,93 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NextGen AI Technology builds the future of AI with human-centric intelligent systems. Explore our portfolio of innovative solutions in sustainability, automation, and communication.">
-    <title>NextGen AI Technology - Building the Future of AI</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7C71GF6KNX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+---
+layout: default
+title: NextGen AI Technology - Building the Future of AI
+description: NextGen AI Technology builds the future of AI with human-centric intelligent systems. Explore our portfolio of innovative solutions in sustainability, automation, and communication.
+---
+<!-- Hero Sectie -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="animate">We Don't Predict The Future.<br>We Build It.</h1>
+        <p class="animate" style="--delay: 0.1s;">NextGen AI Technology develops human-centric intelligent systems that democratize AI and redefine industries.</p>
+        <a href="portfolio.html" class="cta-button animate" style="--delay: 0.2s;">Explore Our Portfolio</a>
+    </div>
+</section>
 
-      gtag('config', 'G-7C71GF6KNX');
-    </script>
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <a href="index.html"><img src="nextgen banner logo.png" alt="NextGen AI Technology Logo" class="logo"></a>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="portfolio.html">Technology & Portfolio</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="investors.html">Investors</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Portfolio Hoogtepunten -->
+<section class="portfolio-preview container">
+    <h2 class="animate">Our Core Technologies</h2>
+    <div class="portfolio-grid">
+        <div class="card animate" style="--delay: 0s;">
+            <h3>CarbonCut AI</h3>
+            <p>Our flagship AI for advanced carbon footprint tracking, reduction recommendations, and certified offsets.</p>
+            <a href="carboncut-ai.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="card animate" style="--delay: 0.1s;">
+            <h3>NextGen Assist</h3>
+            <p>A live AI assistant for SMEs, handling customer management, invoicing, and complex notifications.</p>
+            <a href="nextgen-assist.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+        <div class="card animate" style="--delay: 0.2s;">
+            <h3>ChatLink</h3>
+            <p>Conversational AI platform for chat-to-pay companionship, focusing on ethical, non-explicit emotional support.</p>
+            <a href="chatlink.html" class="learn-more">Learn More &rarr;</a>
+        </div>
+    </div>
+</section>
 
-    <main>
-        <!-- Hero Sectie -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="animate">We Don't Predict The Future.<br>We Build It.</h1>
-                <p class="animate" style="--delay: 0.1s;">NextGen AI Technology develops human-centric intelligent systems that democratize AI and redefine industries.</p>
-                <a href="portfolio.html" class="cta-button animate" style="--delay: 0.2s;">Explore Our Portfolio</a>
-            </div>
-        </section>
-
-        <!-- Portfolio Hoogtepunten -->
-        <section class="portfolio-preview container">
-            <h2 class="animate">Our Core Technologies</h2>
-            <div class="portfolio-grid">
-                <div class="card animate" style="--delay: 0s;">
-                    <h3>CarbonCut AI</h3>
-                    <p>Our flagship AI for advanced carbon footprint tracking, reduction recommendations, and certified offsets.</p>
-                    <a href="carboncut-ai.html" class="learn-more">Learn More &rarr;</a>
-                </div>
-                <div class="card animate" style="--delay: 0.1s;">
-                    <h3>NextGen Assist</h3>
-                    <p>A live AI assistant for SMEs, handling customer management, invoicing, and complex notifications.</p>
-                    <a href="nextgen-assist.html" class="learn-more">Learn More &rarr;</a>
-                </div>
-                <div class="card animate" style="--delay: 0.2s;">
-                    <h3>ChatLink</h3>
-                    <p>Conversational AI platform for chat-to-pay companionship, focusing on ethical, non-explicit emotional support.</p>
-                    <a href="chatlink.html" class="learn-more">Learn More &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Doelgroep CTA -->
-        <section class="audience-cta">
-            <div class="container grid-2">
-                <div class="cta-box animate" style="--delay: 0s;">
-                    <h3>For Investors</h3>
-                    <p>Discover our roadmap, market position, and the vision driving our growth.</p>
-                    <a href="investors.html" class="cta-button-secondary">Investor Relations</a>
-                </div>
-                <div class="cta-box animate" style="--delay: 0.1s;">
-                    <h3>For Enterprise</h3>
-                    <p>Let's discuss how our AI solutions can optimize your operations and drive real-world impact.</p>
-                    <a href="contact.html" class="cta-button-secondary">Partner With Us</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer><div class="container"><p>&copy; 2024 NextGen AI Technology. All rights reserved.</p></div></footer>
-
-    <script>
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
-        document.querySelectorAll('.animate').forEach(element=>{observer.observe(element)});
-    </script>
-</body>
-</html>
+<!-- Doelgroep CTA -->
+<section class="audience-cta">
+    <div class="container grid-2">
+        <div class="cta-box animate" style="--delay: 0s;">
+            <h3>For Investors</h3>
+            <p>Discover our roadmap, market position, and the vision driving our growth.</p>
+            <a href="investors.html" class="cta-button-secondary">Investor Relations</a>
+        </div>
+        <div class="cta-box animate" style="--delay: 0.1s;">
+            <h3>For Enterprise</h3>
+            <p>Let's discuss how our AI solutions can optimize your operations and drive real-world impact.</p>
+            <a href="contact.html" class="cta-button-secondary">Partner With Us</a>
+        </div>
+    </div>
+</section>
 
