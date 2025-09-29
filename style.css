@@ -13,7 +13,82 @@
     --status-planned: #4A90E2;
 }
 
-/* ... (Alle globale stijlen blijven ongewijzigd) ... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+
+/* --- 1. Header & Navigatie --- */
+header {
+    background-color: var(--light-text);
+    border-bottom: 1px solid var(--border-light);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 45px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--primary-red);
+    border-bottom-color: var(--primary-red);
+}
 
 /* --- 2. Hero Sectie (Homepage) --- */
 .hero {
@@ -24,7 +99,7 @@
     justify-content: center;
     text-align: center;
     color: var(--light-text);
-    background-image: url('/join the ai revolution. nextgen.jpg');
+    background-image: url('/images/join the ai revolution nextgen.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -90,6 +165,359 @@
     height: 100%;
 }
 
+/* --- 3. Algemene Pagina Stijlen --- */
+.page-title {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-light);
+}
+.page-title h2 { margin-bottom: 10px; }
+.page-title p { max-width: 700px; margin: 0 auto; color: #555; }
 
-/* --- 3. Portfolio Hoogtepunten --- */
-/* ... (Alle overige stijlen blijven ongewijzigd) ... */
+/* --- 4. Kaarten & Grids --- */
+.portfolio-preview { padding: 80px 20px; }
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.card {
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.card h3 { color: var(--primary-red); }
+.card p { margin-bottom: 20px; }
+.learn-more { font-weight: 700; }
+
+/* --- 5. Doelgroep CTA (Homepage) --- */
+.audience-cta {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 20px;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.cta-box {
+    border: 1px solid #444;
+    padding: 30px;
+    border-radius: 8px;
+}
+.cta-box h3 { font-size: 1.8rem; color: var(--light-text); }
+.cta-button-secondary {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cta-button-secondary:hover {
+    background-color: var(--primary-red);
+    color: var(--light-text);
+}
+
+/* --- 6. About Us Pagina --- */
+.founder-section { padding: 80px 20px; }
+.about-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+.founder-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--border-light);
+}
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.founder-bio h4 {
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
+.founder-bio blockquote {
+    border-left: 3px solid var(--primary-red);
+    padding-left: 20px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #333;
+}
+.vision-section {
+    background-color: var(--card-bg);
+    padding: 80px 20px;
+}
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.vision-item h3 { color: var(--primary-red); }
+
+/* --- 7. Portfolio Pagina --- */
+.portfolio-page { padding: 0 0 80px 0; }
+.portfolio-full-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+.portfolio-card {
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.portfolio-card p { flex-grow: 1; }
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.card-header h3 { margin-bottom: 0; }
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+}
+.status-flagship { background-color: var(--status-flagship); }
+.status-live { background-color: var(--status-live); }
+.status-beta { background-color: var(--status-beta); }
+.status-planned { background-color: var(--status-planned); }
+
+/* --- 8. Investors Pagina --- */
+.investor-content { padding: 40px 0 80px 0; }
+.investor-section { margin-bottom: 60px; }
+.investor-section h3 { text-align: center; font-size: 2rem; }
+.investor-section p { max-width: 800px; margin: 0 auto; text-align: center; }
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+.metric-box h4 { font-size: 3rem; color: var(--primary-red); margin-bottom: 5px; }
+.metric-box p { font-size: 1rem; color: #555; }
+.roadmap {
+    position: relative;
+    margin-top: 40px;
+}
+.roadmap::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--border-light);
+}
+.roadmap-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+.roadmap-milestone {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid var(--border-light);
+}
+.roadmap-item.completed .roadmap-milestone,
+.roadmap-item.current .roadmap-milestone {
+    border-color: var(--primary-red);
+}
+.roadmap-item.current .roadmap-milestone {
+    background-color: var(--primary-red);
+}
+.downloads { text-align: center; }
+
+/* --- 9. News Pagina --- */
+.news-section { padding: 0 0 80px 0; }
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.news-card {
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.news-image-link img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.news-content { padding: 25px; }
+.news-meta {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+.news-content h3 a {
+    color: var(--dark-text);
+    transition: color 0.3s ease;
+}
+.news-content h3 a:hover { color: var(--primary-red); }
+
+/* --- 10. Contact Pagina --- */
+.contact-section { padding: 40px 0 80px 0; }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+.contact-info .info-item { margin-bottom: 20px; }
+.contact-info .info-item h4 { color: var(--dark-text); margin-bottom: 5px; }
+.contact-info .info-item a { color: var(--primary-red); }
+.contact-form .form-group { margin-bottom: 20px; }
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- 11. Product Detail Pagina's --- */
+.product-hero {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 20px;
+    text-align: center;
+}
+.product-hero h1 { margin-bottom: 10px; }
+.product-hero .hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ccc;
+}
+.product-hero .status-badge { margin-bottom: 15px; }
+.product-overview { padding: 80px 20px; }
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.overview-visual img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.product-features {
+    background-color: var(--card-bg);
+    padding: 80px 20px;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature-icon svg { width: 30px; height: 30px; }
+.product-cta {
+    padding: 80px 20px;
+    text-align: center;
+}
+.product-cta h2 { max-width: 600px; margin-left: auto; margin-right: auto; }
+.product-cta p { margin-bottom: 30px; }
+
+/* --- 12. Animaties --- */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 13. Footer --- */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* --- 14. Mobiele Responsiviteit --- */
+@media (max-width: 992px) {
+    .about-grid, .overview-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .grid-2 { grid-template-columns: 1fr; }
+    .roadmap::before { left: 50%; transform: translateX(-50%); }
+    .roadmap-item { padding-left: 0; text-align: center; }
+    .roadmap-milestone { left: 50%; transform: translateX(-50%); }
+}
