@@ -90,21 +90,39 @@ header nav ul li a.active {
     border-bottom-color: var(--primary-red);
 }
 
-/* --- 2. Hero Sectie (Homepage) --- */
-.hero {
+/* --- 2. Hero Video Sectie (Homepage) --- */
+.hero-video-section {
     position: relative;
-    height: 80vh;
+    height: 100vh; /* Volledige schermhoogte voor een meeslepende ervaring */
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: var(--light-text);
-    background-image: url('/images/join the ai revolution nextgen.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
-.hero::before {
+.hero-video-section .video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 aspect ratio */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Video op de achterste laag */
+}
+
+.hero-video-section .video-background iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Voorkomt dat de video-iframe geklikt kan worden */
+}
+
+/* Donkere overlay, net als in het originele ontwerp, voor leesbaarheid */
+.hero-video-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -112,15 +130,19 @@ header nav ul li a.active {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2; /* Overlay komt boven de video */
 }
 
-.hero-content {
+/* Hernoemd naar .overlay-content in de HTML, hier aangepast naar .hero-content voor consistentie */
+.hero-video-section .overlay-content {
     position: relative;
+    z-index: 3; /* Tekst komt boven de overlay */
     max-width: 900px;
+    padding: 20px;
 }
 
-.hero-content h1 { margin-bottom: 20px; }
-.hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
+.overlay-content h1 { margin-bottom: 20px; }
+.overlay-content p { font-size: 1.2rem; margin-bottom: 30px; }
 
 .cta-button {
     background-color: var(--primary-red);
